@@ -1,0 +1,148 @@
+<!--
+    Some deprecated tags & attributes like (font, leftmargin, border, cellpading, cellspacing) 
+    are used because there is no CSS at all in the document and I wanted to style to make the page looks good
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Post a new classified ad on Cairo Classifieds.">
+        <meta name="author" content="Fares Mohamed">
+        <meta name="keywords" content="Classifieds, Used Products, Selling, Buying, Shoping, Saling">
+        <title>Cairo Classifieds - Post an Ad</title>
+        <link rel="icon" type="image/svg+xml" href="images/etc-svgrepo-com.svg">
+    </head>
+    <body>
+        <table width="1000" border="1" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+                <td colspan="2" align="center" valign="middle">
+                    <table width="100%" border="0" cellpadding="10" cellspacing="0">
+                        <tr>
+                            <td align="left" valign="middle">
+                                <img src="images/etc-svgrepo-com.svg" alt="Logo" width="40px">
+                                <font size="6" face="Arial, sans-serif"><b>Cairo Classifieds</b></font><br>
+                            </td>
+                            <td align="right" valign="middle">
+                                <font size="2" face="Arial, sans-serif">Serving Cairo since 2026</font>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td width="200" valign="top" bgcolor="#e8e8e8">
+                    <table width="100%" border="0" cellpadding="6" cellspacing="0">
+                        <tr><td><b>Navigate</b></td></tr>
+                        <tr><td><a href="index.html">Home</a></td></tr>
+                        <tr><td><a href="category.html">Browse Categories</a></td></tr>
+                        <tr><td><a href="listing-detail.html">Listing Details</a></td></tr>
+                        <tr><td><a href="post-ad.html">Post an Ad</a></td></tr>
+                        <tr><td><a href="contact.html">Contact Us</a></td></tr>
+                    </table>
+                </td>
+                <td valign="top">
+                    <table width="100%" border="0" cellpadding="10" cellspacing="0">
+                        <!-- Post a New Classified Section -->
+                        <tr>
+                            <td>
+                                <font face="Arial, sans-serif" size="4"><b>Post a New Classified Ad</b></font><br>
+                                <font face="Arial, sans-serif">Fill in the fields below. Fields marked with * are required.</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <form method="get" action="#">
+                                <table width="100%" border="0" cellpadding="6" cellspacing="0">
+                                    <tr>
+                                        <td width="180" align="right"><label for="ad-title">Ad Title *</label></td>
+                                        <td><input type="text" id="ad-title" name="ad-title" size="40" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right"><label for="ad-category">Category *</label></td>
+                                        <td>
+                                            <select id="ad-category" name="ad-category" required>
+                                                <option value="">-- Select a category --</option>
+                                                <option value="jobs">Jobs</option>
+                                                <option value="for-sale">For Sale</option>
+                                                <option value="housing">Housing</option>
+                                                <option value="services">Services</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right"><label for="ad-price">Price / Rate</label></td>
+                                        <td><input type="number" id="ad-price" name="ad-price" min="0" step="1"> EGP</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right"><label for="ad-location">Location</label></td>
+                                        <td><input type="text" id="ad-location" name="ad-location" size="30" placeholder="e.g. Maadi"></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right" valign="top"><label for="ad-description">Description *</label></td>
+                                        <td><textarea id="ad-description" name="ad-description" rows="5" cols="40" required></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right"><label for="ad-email">Contact Email *</label></td>
+                                        <td><input type="email" id="ad-email" name="ad-email" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right"><label for="ad-phone">Contact Phone</label></td>
+                                        <td><input type="tel" id="ad-phone" name="ad-phone" pattern="[0-9]{11}" placeholder="01XXXXXXXXX"></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right"><label for="ad-photo">Upload a Photo</label></td>
+                                        <td><input type="file" id="ad-photo" name="ad-photo" accept="image/*"></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">Ad Type</td>
+                                        <td>
+                                            <input type="radio" id="ad-type-sell" name="ad-type" value="sell" checked>
+                                            <label for="ad-type-sell">Selling</label>
+                                            <input type="radio" id="ad-type-buy" name="ad-type" value="buy">
+                                            <label for="ad-type-buy">Buying</label>
+                                            <input type="radio" id="ad-type-service" name="ad-type" value="service">
+                                            <label for="ad-type-service">Offering a Service</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">Options</td>
+                                        <td>
+                                            <input type="checkbox" id="ad-urgent" name="ad-options" value="urgent">
+                                            <label for="ad-urgent">Mark as Urgent</label><br>
+                                            <input type="checkbox" id="ad-negotiable" name="ad-options" value="negotiable">
+                                            <label for="ad-negotiable">Price Negotiable</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>
+                                            <button type="submit">Post Ad</button>
+                                            <button type="reset">Clear Form</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- Footer -->
+            <tr>
+                <td colspan="2" align="center" bgcolor="#e8e8e8">
+                    <table width="100%" border="0" cellpadding="8" cellspacing="0">
+                        <tr>
+                            <td align="center">
+                                <font size="2" face="Arial, sans-serif">
+                                Cairo Classifieds &mdash; <a href="mailto:knight@mail.com">knight@mail.com</a><br>
+                                &copy; 2026 Cairo Classifieds. All rights reserved.
+                                </font>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
