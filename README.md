@@ -91,4 +91,4 @@ Possible improvements:
 
 **Fares Mohamed**
 
-© 2026 Cairo Classifieds
+© 2026 Cairo Classifieds.
